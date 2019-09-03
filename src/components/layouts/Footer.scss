@@ -1,0 +1,44 @@
+@import '../../stylesheets/dir';
+
+.footer {
+  background: $other-blue-grey;
+
+  padding: 2rem;
+  color: $white;
+
+  h3 {
+    margin: 0;
+  }
+
+  .sl-colored {
+    a:hover {
+      i {
+        color: $cf-red-dark;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .footer {
+    .social-links {
+      a {
+        margin: 0 0.5rem;
+        i {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+// @media (max-width: 3px) {
+//   .footer {
+//     .social-links {
+//       a {
+//         i {
+//           font-size: 1.85rem;
+//         }
+//       }
+//     }
+//   }
+// }

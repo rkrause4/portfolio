@@ -1,0 +1,49 @@
+@import '../../stylesheets/dir';
+
+header {
+  background: $other-grey-blue;
+  text-align: center;
+  height: 94vh;
+
+  .heading-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 85vh;
+    flex-direction: column;
+
+    h1 {
+      background: $prim-blue;
+      padding: 0.75rem 1rem;
+      color: $white;
+      font-size: 4rem;
+      margin: 0;
+    }
+
+    h2 {
+      // color: #242424;
+      color: $other-blue-grey;
+    }
+
+    p {
+      padding: 0 15%;
+      color: $other-blue-grey;
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  header {
+    .heading-content {
+      h1 {
+        font-size: 3.25rem;
+        padding: 0.5rem 0.5rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
