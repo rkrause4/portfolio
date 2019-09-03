@@ -2,84 +2,84 @@ import React, { Component } from 'react';
 import './Contact.scss';
 
 export default class Contact extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: '',
-      name: '',
-      subject: '',
-      message: '',
-      formErrors: {
-        email: '',
-        name: '',
-        subject: '',
-        message: ''
-      },
-      emailValid: false,
-      nameValid: false,
-      subjectValid: false,
-      messageValid: false,
-      formValid: false
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     email: '',
+  //     name: '',
+  //     subject: '',
+  //     message: '',
+  //     formErrors: {
+  //       email: '',
+  //       name: '',
+  //       subject: '',
+  //       message: ''
+  //     },
+  //     emailValid: false,
+  //     nameValid: false,
+  //     subjectValid: false,
+  //     messageValid: false,
+  //     formValid: false
+  //   };
+  // }
 
-  handleUserInput(e) {
-    const name = e.target.name;
-    const value = e.target.value;
-    this.setState({ [name]: value }, () => {
-      this.validateField(name, value);
-    });
-  }
+  // handleUserInput(e) {
+  //   const name = e.target.name;
+  //   const value = e.target.value;
+  //   this.setState({ [name]: value }, () => {
+  //     this.validateField(name, value);
+  //   });
+  // }
 
-  validateField(fieldName, value) {
-    let fieldValidationErrors = this.state.formErrors,
-      emailValid = this.state.emailValid,
-      nameValid = this.state.nameValid,
-      subjectValid = this.state.subjectValid,
-      messageValid = this.state.messageValid;
+  // validateField(fieldName, value) {
+  //   let fieldValidationErrors = this.state.formErrors,
+  //     emailValid = this.state.emailValid,
+  //     nameValid = this.state.nameValid,
+  //     subjectValid = this.state.subjectValid,
+  //     messageValid = this.state.messageValid;
 
-    switch (fieldName) {
-      case 'email':
-        emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
-        fieldValidationErrors.email = emailValid ? '' : 'is invalid';
-        break;
-      case 'name':
-        nameValid = !value.length;
-        fieldValidationErrors.name = nameValid ? '' : 'cannot be blank';
-        break;
-      case 'subject':
-        subjectValid = !value.length;
-        fieldValidationErrors.subject = subjectValid ? '' : 'cannot be blank';
-        break;
-      case 'message':
-        messageValid = !value.length;
-        fieldValidationErrors.subject = messageValid ? '' : 'cannot be blank';
-        break;
+  //   switch (fieldName) {
+  //     case 'email':
+  //       emailValid = value.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
+  //       fieldValidationErrors.email = emailValid ? '' : 'is invalid';
+  //       break;
+  //     case 'name':
+  //       nameValid = !value.length;
+  //       fieldValidationErrors.name = nameValid ? '' : 'cannot be blank';
+  //       break;
+  //     case 'subject':
+  //       subjectValid = !value.length;
+  //       fieldValidationErrors.subject = subjectValid ? '' : 'cannot be blank';
+  //       break;
+  //     case 'message':
+  //       messageValid = !value.length;
+  //       fieldValidationErrors.subject = messageValid ? '' : 'cannot be blank';
+  //       break;
 
-      default:
-        break;
-    }
-    this.setState(
-      {
-        formErrors: fieldValidationErrors,
-        emailValid: emailValid,
-        nameValid: nameValid,
-        subjectValid: subjectValid,
-        messageValid: messageValid
-      },
-      this.validateForm
-    );
-  }
+  //     default:
+  //       break;
+  //   }
+  //   this.setState(
+  //     {
+  //       formErrors: fieldValidationErrors,
+  //       emailValid: emailValid,
+  //       nameValid: nameValid,
+  //       subjectValid: subjectValid,
+  //       messageValid: messageValid
+  //     },
+  //     this.validateForm
+  //   );
+  // }
 
-  validateForm() {
-    this.setState({
-      formValid:
-        this.state.emailValid &&
-        this.state.nameValid &&
-        this.state.subjectValid &&
-        this.state.messageValid
-    });
-  }
+  // validateForm() {
+  //   this.setState({
+  //     formValid:
+  //       this.state.emailValid &&
+  //       this.state.nameValid &&
+  //       this.state.subjectValid &&
+  //       this.state.messageValid
+  //   });
+  // }
   render() {
     return (
       <section id='contact'>
@@ -100,8 +100,8 @@ export default class Contact extends Component {
                 id='email'
                 type='text'
                 placeholder='Email'
-                value={this.state.email}
-                onChange={event => this.handleUserInput(event)}
+                // value={this.state.email}
+                // onChange={event => this.handleUserInput(event)}
               />
             </div>
 
@@ -116,8 +116,8 @@ export default class Contact extends Component {
                 id='name'
                 type='text'
                 placeholder='Name'
-                value={this.state.name}
-                onChange={event => this.handleUserInput(event)}
+                // value={this.state.name}
+                // onChange={event => this.handleUserInput(event)}
               />
             </div>
 
@@ -132,8 +132,8 @@ export default class Contact extends Component {
                 id='subject'
                 type='text'
                 placeholder='Subject'
-                value={this.state.subject}
-                onChange={event => this.handleUserInput(event)}
+                // value={this.state.subject}
+                // onChange={event => this.handleUserInput(event)}
               />
             </div>
 
@@ -149,8 +149,8 @@ export default class Contact extends Component {
                 cols='30'
                 rows='10'
                 placeholder='Message'
-                value={this.state.message}
-                onChange={event => this.handleUserInput(event)}
+                // value={this.state.message}
+                // onChange={event => this.handleUserInput(event)}
               ></textarea>
             </div>
 
@@ -161,7 +161,7 @@ export default class Contact extends Component {
               data-aos='fade-left'
               data-aos-delay='800'
               data-aos-offset='100'
-              onClick={this.validateField}
+              // onClick={this.validateField}
             />
           </form>
 
