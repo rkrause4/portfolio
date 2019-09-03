@@ -83,16 +83,11 @@ export default class Contact extends Component {
   render() {
     return (
       <section id='contact'>
-        <div
-          className='container'
-          // data-aos='fade-left'
-          // data-aos-delay='50'
-          // data-aos-offset='650'
-        >
+        <div className='container'>
           <h2 data-aos='fade-in' data-aos-delay='100'>
             Let's Get In Touch
           </h2>
-          <form action='POST' id='contact-form' name='contact'>
+          <form method='POST' id='contact-form' name='contact'>
             <input type='hidden' name='form-name' value='contact' />
             <div
               className='form-group'
