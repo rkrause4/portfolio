@@ -8,7 +8,7 @@ export default class Footer extends Component {
         <div className='container'>
           <p>Created with React, HTML, and SCSS</p>
           <p>Hosted on Netlify</p>
-          <p>Robert Krause © 2019</p>
+          <p>Robert Krause © 2020</p>
           <div className='social-links sl-colored'>
             <a
               href='https://github.com/rkrause4'
